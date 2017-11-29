@@ -1,0 +1,32 @@
+path ubuntu-installer/amd64/boot-screens/
+include ubuntu-installer/amd64/boot-screens/menu.cfg
+default ubuntu-installer/amd64/boot-screens/vesamenu.c32
+prompt 0
+timeout 0
+
+menu clear 
+
+MENU TITLE OS Installation in Legacy Mode
+
+
+LABEL RHEL6.9-GA-kickstart
+	kernel /RedHat/6.9/vmlinuz
+	initrd /RedHat/6.9/initrd.img
+	append lang=en_US keymap=us inst.ks=http://192.168.5.1/kickstart/RHEL6-ks.cfg ip=dhcp
+LABEL RHEL7.4-GA-kickstart
+	kernel /RedHat/7.4/vmlinuz
+	initrd /RedHat/7.4/initrd.img
+	append lang=en_US keymap=us inst.ks=http://192.168.5.1/kickstart/RHEL7-ks.cfg ip=dhcp
+
+LABEL SLE11.4-GM-manually
+	kernel /SUSE/11.4/linux
+	initrd /SUSE/11.4/initrd
+	append  install=http://www.httpboot.local/SUSE/11.4 ip=dhcp
+LABEL SLE12.3-GM-manually
+	kernel /SUSE/12.3/linux
+	initrd /SUSE/12.3/initrd
+	append  install=http://www.httpboot.local/SUSE/12.3 ip=dhcp
+
+LABEL Ubuntu16.04.3-server-amd64-kickstart
+	kernel /Ubuntu/16.04.3/amd64/linux 
+	append vga=normal initrd=/Ubuntu/16.04.3/amd64/initrd.gz ks=http://www.httpboot.local/kickstart/ubuntu-ks.cfg live-installer/net-image=http://www.httpboot.local/Ubuntu/16.04.3/install/filesystem.squashfs --quiet 

@@ -1,0 +1,13 @@
+$TTL 1w
+;
+@		IN SOA		www.httpbootipv6.local.	root.httpbootipv6.local. (
+				2017112800	; serial
+				1w		; refresh
+				1d		; retry
+				4w		; expiry
+				1w )		; minimum
+
+e.f.a.c.f.0.0.f.8.b.d.1.0.0.2.ip6.arpa.	IN NS		www.httpbootipv6.local.
+;		IN data		file for local loopback interface
+www		IN AAAA		2001:db8:f00f:cafe::1
+1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0	IN PTR		www.httpbootipv6.local.
