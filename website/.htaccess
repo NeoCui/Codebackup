@@ -1,6 +1,0 @@
-<File ~ "^\.(htaccess|htpasswd)$">
-deny from all
-</Files>
-Options -Indexes
-DirectoryIndex login.html
-order deny,allow
