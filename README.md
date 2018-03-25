@@ -17,10 +17,8 @@ Title
   attentaion: there is a backspace between \# and subtitle
 
 ### Multi-line text
-		You can write multi-line text by input two tabstop(8)
-		I do not know how to write so many boring, useless <br />
-		vocabulary. I have to do this because I want to test whether
-		I am right or wrong.
+Use Linux tool indent to format code style:
+indent -npro -nip -nlp -npsl -i4 -ts4 -sob -l200 -ss -bl -bli 0
 		
 ### We also can write code in this file, let's do a HelloWorld in Java
     public class HelloWorld {
